@@ -1,0 +1,3 @@
+[submodule "CMakeModules"]
+	path = cmake
+	url = ../CMakeModules
