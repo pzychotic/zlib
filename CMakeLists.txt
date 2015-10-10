@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.4.4)
+cmake_minimum_required(VERSION 3.3)
 set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS ON)
 
 project(zlib C)
@@ -20,8 +20,8 @@ include( PzyDefaults )
 option(ASM686 "Enable building i686 assembly implementation")
 option(AMD64 "Enable building amd64 assembly implementation")
 
-set(INSTALL_BIN_DIR "bin/\${BUILD_TYPE}" CACHE PATH "Installation directory for executables")
-set(INSTALL_LIB_DIR "lib/\${BUILD_TYPE}" CACHE PATH "Installation directory for libraries")
+set(INSTALL_BIN_DIR "bin/$<LOWER_CASE:$<CONFIG>>" CACHE PATH "Installation directory for executables")
+set(INSTALL_LIB_DIR "lib/$<LOWER_CASE:$<CONFIG>>" CACHE PATH "Installation directory for libraries")
 set(INSTALL_INC_DIR "include" CACHE PATH "Installation directory for headers")
 set(INSTALL_MAN_DIR "share/man" CACHE PATH "Installation directory for manual pages")
 set(INSTALL_PKGCONFIG_DIR "share/pkgconfig" CACHE PATH "Installation directory for pkgconfig (.pc) files")
