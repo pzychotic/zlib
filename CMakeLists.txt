@@ -3,7 +3,7 @@ set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS ON)
 
 project(zlib C)
 
-set(VERSION "1.2.10")
+set(VERSION "1.2.11.1")
 
 
 # Set the path to the CMake module files
